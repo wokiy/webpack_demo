@@ -1,0 +1,1 @@
+webpackJsonp([0],{ddhh:function(n,o,t){"use strict";function c(){return confirm("要回娘家嘛？")}function e(){window.location.href="http://www.atguigu.com"}Object.defineProperty(o,"__esModule",{value:!0}),o.confirmFn=c,o.back=e}});

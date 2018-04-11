@@ -1,0 +1,33 @@
+#carouse-wrapper {
+  position: relative;
+}
+#carouse-wrapper ul {
+  position: absolute;
+  list-style: none;
+  overflow: hidden;
+}
+#carouse-wrapper ul > li {
+  float: left;
+}
+#carouse-wrapper ul > li img {
+  display: block;
+  width: 100%;
+}
+#carouse-wrapper .points-wrapper {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+#carouse-wrapper .points-wrapper span {
+  display: inline-block;
+  border-radius: 5px ;
+  margin-left: 5px;
+  width: 10px;
+  height: 10px;
+  background: deeppink;
+}
+#carouse-wrapper .points-wrapper span.active {
+  background: green;
+}
