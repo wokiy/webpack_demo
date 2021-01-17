@@ -1,0 +1,16 @@
+{
+  "name": "demo1",
+  "version": "1.0.0",
+  "description": "wokiy",
+  "main": "newName.config.js",
+  "scripts": {
+    "build":"webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "wokiy",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.15.0",
+    "webpack-cli": "^4.3.1"
+  }
+}
