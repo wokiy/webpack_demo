@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js定时器和闭包写法</title>
+</head>
+<body>
+    <h1>
+        js 定时器写法
+    </h1>
+    <script>
+        // 每隔一秒输出
+        for(let i =0 ;i<10;i++) {
+            setTimeout(function(){
+                console.log('es6写法'+i++)
+            },i*1000)
+        }
+        //es5立即执行写法
+        for(var i =0;i<10;i++) {
+            (function(j){
+                setTimeout(function(){
+                    console.log('es5:'+j++);
+                },j*1000)
+            })(i)
+        }
+        
+    </script>
+</body>
+</html>
