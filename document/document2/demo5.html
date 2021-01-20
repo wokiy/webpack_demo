@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>箭头函数</title>
+</head>
+<body>
+    <h2>es6 箭头函数的this</h2>
+    <script>
+        function bar() {
+            return () =>{
+                return () =>{
+                    console.log(this);
+                }
+            }
+        }
+        //箭头函数中一旦代码词法阶段 this就已经绑定了。
+        //window 
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件代理</title>
+</head>
+<body>
+    <ul id="app">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <script>
+        const app = document.getElementById("app");
+        //事件代理 冒泡机制
+        app.addEventListener('click',function(event){
+            console.log(event.target.innerText);
+        })
+    </script>
+</body>
+</html>

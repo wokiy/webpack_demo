@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>原型链</title>
+</head>
+<body>
+    <div>
+        <h1>
+            原型链
+        </h1>
+        <div>
+            <p>
+                构造函数中都有一个属性‘prototype’ 指向一个对象内存空间
+                实例对象中有个隐式原型__proto__ 指向构造函数的原型
+                
+                作用：这样实例对象上不存在的方法，可以通过这个属性上自己构造函数的原型上寻找。
+                    原型对象也是个对象，对象就有个—__proto__属性 指向Object对象的原型，这样层层往上寻在实例对象上不存在的方法-》
+                    形成一条【原型链】
+            </p>
+        </div>
+    </div>
+</body>
+</html>

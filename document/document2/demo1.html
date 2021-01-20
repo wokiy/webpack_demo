@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js变量提升</title>
+</head>
+<body>
+    <div>
+        <h1>js中的变量提升</h1>
+        <p>
+            js在运行时候 会生成一个执行环境 ： 由函数执行环境  和 全局执行环境。
+        </p>
+    </div>
+    <script>
+        foo();//foo 
+        bar()
+        // console.log(bar); //undefined
+        // var bar = 2333;
+        function foo() {
+            console.log("foo function!");
+        }
+        //输出的原因，函数和变量提升的原因。
+        /**
+            代码执行有两个阶段： 1: 创建阶段。js解析器会提前找到需要变量提升的变量和函数，提前开辟内存空间，函数存到内存空间中，变量只声明并且赋值 undefined。
+            2: 代码执行阶段。代码可以直接使用
+        */
+
+        function bar() {
+            console.log('1bar')
+        }
+        function bar() {
+            console.log("2bar")
+        }
+        console.log('now'+bar); //function bar
+        var bar = 'hello bar';
+        //变量覆盖 js动态语言 弱类型  
+        console.log('after'+bar) // hello bar
+        //函数提升在变量提升前面 函数提升后面相同的函数会覆盖
+
+    
+    </script>
+</body>
+</html>

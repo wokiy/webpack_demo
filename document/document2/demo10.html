@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浏览器性能问题</title>
+</head>
+<body>
+    <div>
+        <h1>
+            重绘和回流
+        </h1>
+        <p>
+            重绘： 样式改变，dom布局不改变
+            回流： dom布局改变 触发回流
+            回流比如你触发重绘
+        </p>
+        <p>
+            visibility display: none
+        </p>
+        <ul>
+            <li>重绘/回流</li>
+            <li>cdn</li>
+            <li>webpack优化项目</li>
+        </ul>
+
+        <div>
+            <h3>webpack</h3>
+            1：打包开启： mode: 'production' 自动压缩代码
+            2：es6 开启 tree shaking 移除没有使用的代码
+            3：小图片使用base64加载显示
+            4: 按照路由拆分代码，按需加载
+        </div>
+    </div>
+</body>
+</html>

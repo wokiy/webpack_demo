@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>判断对象类型</title>
+</head>
+<body>
+    <h1>
+        js 判断对象类型的两种方法
+    </h1>
+    <script>
+        let arr = [1,2];
+        let foo = function() {
+            return 2;
+        }
+        // 1
+        let res1 = Object.prototype.toString.call(arr);
+        //2
+        let res2 = foo instanceof Function;
+        console.log(res1)
+        console.log(res2);
+
+    </script>
+</body>
+</html>

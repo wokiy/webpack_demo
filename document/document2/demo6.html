@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this</title>
+</head>
+<body>
+    <script>
+        function bar() {
+            console.log(this.a);
+        }
+        var a = 11;
+        bar();
+        let obj = {
+            a:22,
+            bar:bar
+        }
+        obj.bar();
+        //new 实例化后this绑定
+        var c = new bar();
+        c.a = 44;
+        console.log(c.a);   
+
+    </script>
+</body>
+</html>

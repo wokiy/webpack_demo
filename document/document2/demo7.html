@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>await async优缺点</title>
+</head>
+<body>
+    <h1>
+        awiat/async 相对于promise来说处理then链式调用时候更清晰度写出代码，缺点： 滥用await会导致性能问题
+        await会阻塞代码
+    </h1>
+    <script>
+        var num = 0;
+        var fn = async () =>{
+            num = num + await 10;
+            console.log('a2'+num);
+            num = num + await 20;
+            console.log("a3"+num)
+        }
+        fn();
+        num ++;
+        console.log('a1'+num);
+        //因为 await是异步操作 执行会先返回 peomise 一个pending 后面先执行 a1 在回去执行异步的 a2 a3
+    </script>
+</body>
+</html>

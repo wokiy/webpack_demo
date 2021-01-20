@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this绑定的几个区别 bind apply call</title>
+</head>
+<body>
+    <div>
+        <h1>
+            目的：改变执行的this指向。
+            不同：参数  执行的结果（函数体 -直接结果？）
+            call(argumentslist) apply(arr) bind(arlist)
+        </h1>
+    </div>
+    <script>
+        let obi = {
+            a: 33
+        }
+        function bar(name,age) {
+            console.log(name,age);
+            console.log(this.a)
+        }
+        bar.call(obi,'hello','22'); //bind
+        bar.apply(obi,['wokiy','44']);//apply
+        bar.bind(obi,'jason','55')();//bind 返回一个函数 
+    </script>
+</body>
+</html>
